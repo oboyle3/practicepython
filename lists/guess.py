@@ -4,12 +4,27 @@ import random
 random_num = random.randint(1,10)
 print(f"the random number genrated is {random_num}")
 print("")
-guess = int(input (" enter a ransom num between 1 and 10 "))
-print(f"you guessed {guess}")
+
+user_trys = 0
 status = True
-if guess < random_num:
-    print(f"your guess is to low man")
-elif guess > random_num:
-    print(f"your guess is to high man")
-elif guess == random_num:
-    print(f"you guessed right as the random num was {random_num} and your guess was {guess}")
+while status:
+    guess = int(input (" enter a ransom num between 1 and 10 "))
+    current_guess = guess
+    if current_guess < random_num:
+        print(f"your guess is to low man")
+        print(f" do you want to try again? enter y for yes and n to quit")
+        play_again = input()
+        if play_again == "y":
+            status = True
+            user_trys = user_trys + 1
+            print("ok lets try again")
+    elif current_guess > random_num:
+        print(f"your guess is to high man")
+        print(f" do you want to try again? enter y for yes and n to quit")
+        play_again = input()
+        if play_again == "y":
+                status = False
+                print("lets quit")
+    elif current_guess == random_num:
+        print(f"you guessed right as the random num was {random_num} and your guess was {guess}")
+        status = False
