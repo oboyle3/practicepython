@@ -41,6 +41,7 @@ def is_right_checker(user_guess, rand_int):
             break
 
 randint = 51
+
 # user_guess = 78
 the_gamer_wants_to_still_play = True
 while the_gamer_wants_to_still_play:
