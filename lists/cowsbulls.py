@@ -29,7 +29,7 @@ def is_right_checker(user_guess, rand_int):
     user_guess_arr = list(str(user_guess))  #1003
     print(f"user_guess_arr = {user_guess_arr}")
     for x in rand_int_arr:
-        # print(f"{x} =x")
+        # print(f"{x} =x")  
         print(f"iteration {x} ")
         time.sleep(1)
         if x in user_guess_arr:
