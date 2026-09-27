@@ -1,4 +1,4 @@
-size  = 4
+size  = 3
 def printpipe(num):
     pipe = "|   "
     for z in range(num):
