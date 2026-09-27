@@ -53,14 +53,16 @@ avail_words = [
 ]
 rand_word = random.choice(avail_words)
 print(f"rand word = {rand_word}")
-
+guess_count = 0
 keep_play = True
 while keep_play:
-    
     curr_choice = str(input (" enter a word:"))
+    if len(curr_choice) > 5:
+        ("Word must be 5 letters")
     
+    guess_count = guess_count + 1
     if curr_choice == rand_word:
-        print("user wins")
+        print(f"user wins | guess counter = {guess_count}")
         keep_play = False
     else:
         #check rand_word[0] vs curr_choice[0]
@@ -74,7 +76,7 @@ while keep_play:
         if(rand_word[3] == curr_choice[3]):
             print(f"Fourth letter correct:     {curr_choice[3]}")
         if(rand_word[4] == curr_choice[4]):
-            print(f"Fith letter correct:      {curr_choice[4]}")
+            print(f"Fith letter correct:    {curr_choice[4]}")
         
         
 
