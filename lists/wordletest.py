@@ -1,6 +1,60 @@
 #how to keep playing and make sure word is 5 letters
+import random
+avail_words = [
+    "apple",
+    "house",
+    "plant",
+    "chair",
+    "table",
+    "water",
+    "green",
+    "black",
+    "white",
+    "world",
+    "light",
+    "sound",
+    "music",
+    "river",
+    "ocean",
+    "beach",
+    "cloud",
+    "storm",
+    "grass",
+    "stone",
+    "bread",
+    "money",
+    "phone",
+    "train",
+    "plane",
+    "truck",
+    "horse",
+    "sheep",
+    "tiger",
+    "eagle",
+    "mouse",
+    "snake",
+    "grape",
+    "peach",
+    "lemon",
+    "berry",
+    "pizza",
+    "pasta",
+    "sugar",
+    "sweet",
+    "happy",
+    "smile",
+    "laugh",
+    "dream",
+    "sleep",
+    "think",
+    "learn",
+    "write",
+    "read",
+    "study"
+]
+rand_word = random.choice(avail_words)
 keep_play = True
-rand_word = "beach"
+print(rand_word)
 while keep_play:
     curr_choice = str(input (" enter a 5 letter word:"))
     if len(curr_choice) > 5:
