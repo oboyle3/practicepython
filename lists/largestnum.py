@@ -1,14 +1,15 @@
 numbers = [12, 45, 7, 89, 23]
 
-#Find largest num given arr
-
 largest = numbers[0]
-for x in range(2):
-    largest = numbers[x]
+
+for x in range(len(numbers)-1):
+    current_num = numbers[x]
+    next_num = numbers[x+1]
+    if current_num > next_num:
+        largest = current_num
+        print(f"current_num {current_num} < next_num {next_num}")
+
     print(f"largest = {largest}")
-    # largest is 12 lets check the number next to it
-    num_to_left = numbers[x+1]
-    print(f"num to left = {num_to_left}")
     
 
     
