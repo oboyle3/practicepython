@@ -17,4 +17,6 @@ for x in range(len(nums) - 1):
     if sum_of_current_and_next == target:
         print("you win")
         break
+def twoSum(self, nums, target):
+    nextnum = 0
     
