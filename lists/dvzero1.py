@@ -1,15 +1,17 @@
-#DV01 tells you how many dollars you gain or lose when interest rates move by 0.01%.
-portfolio_worth = 1000000 #100k
-#lets calculate the dv01
-#Interest rate movement =  Rates increase 1 basis point (0.01%)
-one_basis_point_movement = 0.0001
-#calulate movement
-modified_duration = 5 #5 years
+# Portfolio information
+portfolio_value = 1000000
+modified_duration = 5
 
-Approximate_portfolio_change_DV01 = portfolio_worth * one_basis_point_movement * modified_duration
+# 1 basis point = 0.01% = 0.0001
+one_basis_point = 0.0001
 
-print(f"DV01 = {Approximate_portfolio_change_DV01 }")
+# Calculate DV01
+dv01 = portfolio_value * modified_duration * one_basis_point
 
-total = portfolio_worth - Approximate_portfolio_change_DV01
+print(f"DV01: ${dv01:,.2f}")
 
-print(f" portfolio worth after applies dV01 {one_basis_point_movement} to portfolio worth {portfolio_worth} = total worth {total}")
+# Assume interest rates increase by 1 basis point
+new_portfolio_value = portfolio_value - dv01
+
+print(f"Original portfolio: ${portfolio_value:,.2f}")
+print(f"New portfolio value: ${new_portfolio_value:,.2f}")
