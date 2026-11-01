@@ -18,6 +18,14 @@ def dvo1(basispoint,portfolio,duration):
     dv01_for_this_portfolio = basispoint*portfolio*duration
     print(f"dv01_for_this_portfolio = {dv01_for_this_portfolio}")
     print(f"your portfolio {portfolio} would lose {dv01_for_this_portfolio} $ over {duration} years")
+    ending_portfolio_worth = portfolio - dv01_for_this_portfolio
+    print(f"ending worth = {ending_portfolio_worth} if basispoint  value changes {basispoint}")
     return dv01_for_this_portfolio
-
+print("THREE BASIS POINTS")
 dvo1(.0003,9000,3)
+print("vs")
+print("ONE BASIS POINTS")
+dvo1(.0001, 9000,3)
+print("vs")
+print("FIVE BASIS POINTS")
+dvo1(.0005,9000,3)
